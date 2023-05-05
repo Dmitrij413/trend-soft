@@ -39,6 +39,7 @@ function scripts() {
 function styles() {
 	return src([
 		'app/css/base.css',
+		'app/css/resetStyles.css',
 		'app/' + preprocessor + '/main.' + preprocessor + '',
 	]) // Выбираем источник: "app/sass/main.sass" или "app/less/main.less"
 	.pipe(eval(preprocessor)()) // Преобразуем значение переменной "preprocessor" в функцию
