@@ -2,15 +2,54 @@
 
 $white: #fff
 $bgRed: #F83718
+$bgGray: #f9f9f9
 $btnHover: #EE816C
+$gray: #F0F0F0
+$black: #000
 
 .main
 	font-family: 'Ubuntu',serif
+	h1
+		font-weight: 700
+		font-size: 50px
+		line-height: 120%
+		text-transform: uppercase
+		color: $white
+		margin: 15px 0 30px
+	h2
+		font-weight: 700
+		font-size: 40px
+		line-height: 120%
+		text-align: center
+		text-transform: uppercase
+		margin-bottom: 30px
+		span
+			color: $bgRed
+			margin-bottom: 0
+	h3
+		font-weight: 700
+		font-size: 24px
+		line-height: 120%
+		text-transform: uppercase
+		margin-bottom: 30px
+	p
+		font-weight: 400
+		font-size: 16px
+		line-height: 120%
+		span
+			font-weight: 300
+			font-size: 26px
+			line-height: 150%
+	
+section
+	padding-top: 100px
+
 
 .btn
 	padding: 9px 28px
 	color: $white
 	background-color: $bgRed
+	margin-top: 30px
 	&:hover
 		background-color: $btnHover
 		transition: 0.5s
@@ -19,5 +58,179 @@ $btnHover: #EE816C
 	width: 1164px
 	margin: 0 auto
 
-.header-content
+.content
 	display: flex
+	justify-content: space-between
+	align-items: center
+
+header
+	position: sticky
+	top: 0px
+	width: 100%
+	background-color: $white
+	z-index: 10
+
+nav
+	margin: 41px 0
+	ul
+		display: flex
+		padding: 0
+		margin: 0
+		li
+			margin-right: 50px
+			list-style: none
+			a
+				text-transform: uppercase
+				text-decoration: none
+				color: $black
+				&:hover
+					color: $bgRed
+					transition: color 0.25s
+		li:last-child
+			margin-right: 0
+
+.lang
+	display: flex
+	align-items: center
+	justify-content: center
+
+.tabs
+	display: flex
+	position: relative
+	background: #F0F0F0
+	padding: 4px
+	border-radius: 12px
+	*
+		z-index: 2
+
+input[type="radio"]
+	display: none
+
+.tab
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 47.22px
+	height: 44.44px
+	font-size: 1.25rem
+	font-weight: 500
+	border-radius: 12px
+	cursor: pointer
+	transition: color 0.15s ease-in
+
+input[type="radio"]
+	& + label
+		color: #666666
+	&:hover
+		& + label
+			color: #F83718
+	&:checked
+		& + label
+			color: #000
+			&:hover
+				color: #F83718
+				transition: color 0.25s
+
+input[id="radio-1"]
+	&:checked
+		& ~ .glider
+			transform: translateX(0)
+
+input[id="radio-2"]
+	&:checked
+		& ~ .glider
+			transform: translateX(100%)
+
+.glider
+	position: absolute
+	display: flex
+	width: 47.22px
+	height: 44.44px
+	left: 3.78px
+	background-color: #FFF
+	z-index: 1
+	border-radius: 12px // just a high number to create pill effect
+	box-shadow: 1.38889px 1.38889px 5.55556px rgba(48, 48, 56, 0.12)
+	transition: 0.25s ease-out
+
+#about
+	background-color: $bgRed
+	color: $white
+	padding-bottom: 86px
+	.text
+		width: 50%
+	.image
+		position: relative
+		.img
+			z-index: 2
+			position: relative
+		#image-bg-left
+			position: absolute
+			bottom: -6px
+			right: 413px
+			z-index: 1
+		#image-bg-right
+			position: absolute
+			top: 69px
+			right: 1px
+			z-index: 1
+
+.filmtoolz-about
+	text-align: center
+	p
+		max-width: 580px
+		margin: auto
+
+.filmtoolz-counters
+	margin: 30px 173px 20px
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	grid-template-rows: 1fr
+	grid-column-gap: 15px
+
+.filmtoolz-counter
+	display: flex
+	flex-direction: column
+	flex-wrap: wrap
+	justify-content: space-evenly
+	align-items: center
+	height: 285px
+	h2
+		margin-bottom: 0
+	p
+		margin: 0
+
+.filmtoolz-item
+	background-color: $bgGray
+	&:first-child
+		background-image: linear-gradient(0deg, rgba(249,249,249,1) 50%, rgba(255,255,255,1) 50%)
+		.container
+			.content
+				border: 2px solid $bgGray
+	.content
+		padding: 50px 85px
+		background-color: $white
+	.container
+		padding-bottom: 50px
+	&:last-child
+		.filmtoolz-item_image
+			img
+				filter: drop-shadow(0px 2px 25px rgba(75, 77, 83, 0.25))
+
+.filmtoolz-item_text
+	width: 40%
+	margin: 0 19px
+
+.kasting
+	max-height: 87px
+
+.kasting-base
+	background-color: $bgGray
+	padding-top: 50px 
+
+.kasting-content
+	background-color: $white
+	padding: 37px 64px
+	margin-top: 30px
+	img
+		margin: 0
