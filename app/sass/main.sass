@@ -39,6 +39,12 @@ $blue: #01AFEB
 		line-height: 120%
 		text-transform: uppercase
 		margin-bottom: 30px
+	h5
+		font-style: normal
+		font-weight: 400
+		font-size: 20px
+		line-height: 150%
+		margin: 0 0 10px
 	p
 		font-weight: 400
 		font-size: 16px
@@ -274,7 +280,7 @@ input[id="radio-2"]
 	grid-column-gap: 0px
 	grid-row-gap: 0px
 	height: 491px
-	margin-bottom: 50px
+	margin-bottom: 150px
 
 .services-item
 	text-align: center
@@ -290,14 +296,52 @@ input[id="radio-2"]
 
 .div1
 	grid-area: 1 / 1 / 3 / 2
+	
 .div2
 	grid-area: 1 / 2 / 2 / 3
+	
 .div3
 	grid-area: 1 / 3 / 2 / 4
+
 .div4
 	grid-area: 2 / 2 / 3 / 3
+
 .div5
 	grid-area: 2 / 3 / 3 / 4
+
+.cont
+	overflow: hidden
+
+.back
+	background: $bgRed
+	color: $white
+
+.cont, .front, .back
+	width:402px
+
+.back
+	height:286px
+	padding: 0 28px
+
+.front, .back
+	display: flex
+	flex-direction: column
+	flex-wrap: wrap
+	justify-content: space-evenly
+	align-items: center
+	float: left
+	transition: all 1s
+	h3
+		margin-top: 10px
+
+.cont:hover .front
+	margin-left:-1000px
+
+.back
+	margin-left:-1255px
+
+.cont:hover .back
+	margin-left:0
 
 .footer-content
 	display: grid
@@ -322,3 +366,11 @@ input[id="radio-2"]
 
 .phone
 	background-color: $bgGray
+	a
+		color: $black
+
+.info
+	color: #959595
+	margin: 60px 
+	text-align: center
+	
